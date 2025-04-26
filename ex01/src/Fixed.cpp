@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 17:41:23 by descamil          #+#    #+#             */
-/*   Updated: 2025/04/26 18:21:54 by descamil         ###   ########.fr       */
+/*   Updated: 2025/04/26 19:03:46 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,17 @@ Fixed::Fixed(const int &number)
 	std::cout << "Int constructor called" << std::endl;
 }
 
+Fixed::Fixed(const Fixed &copy)
+{
+	_fixedPointValue = copy._fixedPointValue;
+	std::cout << "Copy constructor called" << std::endl;
+}
+
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
+}
+
 float Fixed::toFloat( void ) const
 {
 	return ((float)_fixedPointValue / (1 << _fractional));
@@ -38,18 +49,6 @@ float Fixed::toFloat( void ) const
 int Fixed::toInt( void ) const
 {
 	return (_fixedPointValue >> _fractional);
-}
-
-std::ostream& operator<<(std::ostream &stream, const Fixed &fixed)
-{
-	stream << fixed.toFloat();
-	return (stream);
-}
-
-Fixed::Fixed(const Fixed &copy)
-{
-	_fixedPointValue = copy._fixedPointValue;
-	std::cout << "Copy constructor called" << std::endl;
 }
 
 Fixed &Fixed::operator=(const Fixed &copy)
@@ -62,7 +61,8 @@ Fixed &Fixed::operator=(const Fixed &copy)
 	return (*this);
 }
 
-Fixed::~Fixed()
+std::ostream& operator<<(std::ostream &stream, const Fixed &fixed)
 {
-	std::cout << "Destructor called" << std::endl;
+	stream << fixed.toFloat();
+	return (stream);
 }
