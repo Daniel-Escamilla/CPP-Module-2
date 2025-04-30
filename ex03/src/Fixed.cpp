@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:21:53 by daniel-esca       #+#    #+#             */
-/*   Updated: 2025/04/28 20:29:38 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/04/30 19:54:29 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,26 @@
 Fixed::Fixed()
 {
 	_fixedPointValue = 0;
-	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float &number)
 {
 	_fixedPointValue = roundf(number * (1 << _fractional));
-	std::cout << "Float constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int &number)
 {
 	_fixedPointValue = number << _fractional;
-	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &copy)
 {
 	_fixedPointValue = copy._fixedPointValue;
-	std::cout << "Copy constructor called" << std::endl;
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+
 }
 
 float Fixed::toFloat( void ) const
@@ -54,10 +50,7 @@ int Fixed::toInt( void ) const
 Fixed &Fixed::operator=(const Fixed &copy)
 {
 	if (this != &copy)
-	{
-		std::cout << "Copy assignment operator called" << std::endl;
 		_fixedPointValue = copy._fixedPointValue;
-	}
 	return (*this);
 }
 
@@ -170,4 +163,3 @@ std::ostream& operator<<(std::ostream &stream, const Fixed &fixed)
 	stream << fixed.toFloat();
 	return (stream);
 }
-
