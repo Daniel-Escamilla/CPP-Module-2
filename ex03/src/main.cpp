@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:22:00 by daniel-esca       #+#    #+#             */
-/*   Updated: 2025/04/28 20:49:56 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/04/30 20:09:14 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
 	Point	b(0,0);
 	Point	c(1,1);
 	Point	m(0.5, 0.5);
-	Point	n(4, 4);
+	Point	n(1.01, 0);
 
 	bool	status;
 
