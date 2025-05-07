@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:19:05 by daniel-esca       #+#    #+#             */
-/*   Updated: 2025/04/28 20:31:48 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/05/07 12:49:31 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ class Fixed
 		int					_fixedPointValue;
 	public:
 		Fixed();
+		~Fixed();
+		Fixed(const Fixed &copy);
+		Fixed				&operator=(const Fixed &copy);
+
 		Fixed(const float &number);
 		Fixed(const int &number);
-		Fixed(const Fixed &copy);
-		~Fixed();
 
 		int					toInt( void ) const;
 		float				toFloat( void ) const;
-
-		Fixed				&operator=(const Fixed &copy);
 
 		bool				operator<(const Fixed &copy);
 		bool				operator>(const Fixed &copy);
