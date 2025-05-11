@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: daniel-escamilla <daniel-escamilla@stud    +#+  +:+       +#+        */
+/*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:20:15 by daniel-esca       #+#    #+#             */
-/*   Updated: 2025/04/28 20:44:54 by daniel-esca      ###   ########.fr       */
+/*   Updated: 2025/05/11 19:27:21 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class Point
 		
 		float	getX() { return (x.toFloat()); };
 		float	getY() { return (y.toFloat()); };
-
 };
 	
 float	area(Point p1, Point p2, Point p3);
