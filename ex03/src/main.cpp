@@ -6,7 +6,7 @@
 /*   By: descamil <descamil@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:22:00 by daniel-esca       #+#    #+#             */
-/*   Updated: 2025/04/30 20:09:14 by descamil         ###   ########.fr       */
+/*   Updated: 2025/08/19 18:46:03 by descamil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int main()
 	bool	status;
 
 	status = bsp(a, b, c, m);
-	std::cout << status << std::endl;
+	std::cout << "Status " << (status ? "true" : "false") << std::endl;
 
 	status = bsp(a, b, c, n);
-	std::cout << status << std::endl;
+	std::cout << "Status " << (status ? "true" : "false") << std::endl;
 
 	return (0);
 }
